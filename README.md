@@ -17,6 +17,7 @@ contents:
     - http://dl-cdn.alpinelinux.org/alpine/edge/main
   packages:
     - ca-certificates-bundle
+    - alpine-baselayout-data
 ```
 
 For more information about all the apko configuration options, please check 

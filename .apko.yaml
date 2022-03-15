@@ -3,3 +3,4 @@ contents:
     - http://dl-cdn.alpinelinux.org/alpine/edge/main
   packages:
     - ca-certificates-bundle
+    - alpine-baselayout-data
