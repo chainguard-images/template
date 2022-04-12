@@ -24,9 +24,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: distroless/actions/apko-snapshot@main
+      id: apko-snapshot
       with:
         config: .apko.yaml
         base-tag: ghcr.io/${{ github.repository }}
+
+    - uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: ${{ steps.apko-snapshot.outputs.digest }}
+        format: 'table'
+        exit-code: '1'
+        vuln-type: 'os,library'
+        severity: 'CRITICAL,HIGH,MEDIUM,LOW,UNKNOWN'
 
     # Post to slack when things fail.
     - if: ${{ failure() }}
