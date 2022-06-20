@@ -1,4 +1,4 @@
-# Template Respository for Distroless Images
+# Template Repository for Distroless Images
 
 This repository contains some basic files to spin up a new distroless image.
 
