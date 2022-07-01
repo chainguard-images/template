@@ -9,7 +9,7 @@ by clicking on the
 "[Use this template button](https://github.com/distroless/template/generate)".
 This will create a new repository using the files contained here.
 
-Modify the sample `.apko.yaml` file to define the configuration of the new image:
+Modify the sample `apko.yaml` file to define the configuration of the new image:
 
 ```yaml
 contents:
