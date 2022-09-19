@@ -25,7 +25,8 @@ the documentation and the [examples](https://github.com/chainguard-dev/apko/tree
 
 ## Image Readme
 
-Remember to describe the purpose of the new image by editing the README.md file.
+This README.md will be overwritten automatically upon successful build using
+[readme-generator](https://github.com/distroless/readme-generator).
 
 ## Release Workflow
 
