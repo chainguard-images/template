@@ -134,12 +134,14 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
+      - name: Get repository name
+        run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
       - name: Generate README
         uses: distroless/readme-generator@main
         with:
           repo: https://github.com/${{ github.repository }}
-          name: ${{ github.event.repository.name }}
-          location: cgr.dev/chainguard/${{ github.event.repository.name }}
+          name: ${{ env.REPO_NAME }}
+          location: cgr.dev/chainguard/${{ env.REPO_NAME }}
           description: "WORK IN PROGRESS"
           push-to-repo: true
 
