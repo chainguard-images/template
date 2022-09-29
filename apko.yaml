@@ -1,9 +1,9 @@
 contents:
   repositories:
-    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://packages.wolfi.dev/os
   packages:
     - ca-certificates-bundle
-    - alpine-baselayout-data
+    - wolfi-baselayout-data
 
 accounts:
   groups:
