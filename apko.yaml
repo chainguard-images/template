@@ -1,11 +1,16 @@
 contents:
   repositories:
-    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://packages.wolfi.dev/os
   packages:
-    - alpine-baselayout-data
-    - ca-certificates-bundle
-    - tzdata
+    - wolfi-baselayout
+    - ca-certificates
+    # TODO: Add packages here:
+    # - busybox # add a shell (or bash, etc.)
+    # - python3 # add a language runtime (or ruby-3.2, nodejs, etc.)
+    # - sqlite  # add a database (or postgres, mariadb, etc.)
 
+# Run the image as a non-root user by default.
+# If you need to run as a specific user, configure it here. 
 accounts:
   groups:
     - groupname: nonroot
